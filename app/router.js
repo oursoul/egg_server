@@ -4,11 +4,9 @@
  * @param {Egg.Application} app - egg application
  */
 module.exports = app => {
-  const { router, controller } = app;
-  router.get('/', controller.home.index);
+    const { router, controller } = app;
 
-  router.get('/article/findAll', controller.article.findAll);
-  router.post('/article/addArticle', controller.article.save);
-  router.get('/article/findById', controller.article.findById);
-  router.get('/test',controller.article.test)
+    router.get('/check', controller.show.check)
+    router.get('/predict', controller.show.predict)
+    router.get('/getkey', controller.show.getKey)
 };
